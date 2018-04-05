@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/P&amp;GAttendanceDir.iml" filepath="$PROJECT_DIR$/P&amp;GAttendanceDir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhillipsPromoter.iml" filepath="$PROJECT_DIR$/PhillipsPromoter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customCamera/customCamera.iml" filepath="$PROJECT_DIR$/customCamera/customCamera.iml" />
     </modules>
   </component>
 </project>

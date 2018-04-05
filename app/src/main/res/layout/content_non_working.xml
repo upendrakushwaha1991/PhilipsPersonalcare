@@ -5,89 +5,140 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cpm.pgattendance.dailyEntry.NonWorkingActivity"
+    tools:context="com.cpm.phillips.dailyEntry.NonWorkingActivity"
     tools:showIn="@layout/activity_non_working">
 
-    <RelativeLayout
-        android:id="@+id/layout1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:weightSum="4">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="3sp"
-            android:layout_marginTop="20dp"
-            android:text="Reason"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/spinner2"
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/textView2"
-            android:layout_marginTop="5dp" />
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <Spinner
-            android:id="@+id/merNotallowdspinner"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="3sp"
+                android:layout_marginTop="20dp"
+                android:text="Reason"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="5dp" />
+
+      <!--      <Spinner
+                android:id="@+id/merNotallowdspinner"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/spinner2"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />-->
+
+          <!--  <TextView
+                android:id="@+id/txt_informto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/merNotallowdspinner"
+                android:text="Informed to"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+-->
+           <!-- <EditText
+                android:id="@+id/edit_informto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/merNotallowdspinner"
+                android:layout_toRightOf="@id/txt_informto"
+                android:visibility="gone" />
+-->
+
+            <!--
+
+                    <TextView
+                        android:id="@+id/testview4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/spinner2"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toRightOf="@+id/spinner2"
+                        android:text="Capture Photo"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/picbdddtn1"
+                        android:layout_width="65sp"
+                        android:layout_height="50sp"
+                        android:layout_alignBaseline="@+id/testview4"
+                        android:layout_alignBottom="@+id/testview4"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/testview4"
+                        android:background="@drawable/camera"
+                        android:visibility="invisible" />
+            -->
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_camera"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/spinner2"
-            android:layout_marginTop="5dp"
-            android:visibility="gone" />
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_weight="2">
 
-        <TextView
-            android:id="@+id/txt_informto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/merNotallowdspinner"
-            android:text="Informed to"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="7"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp">
 
-        <EditText
-            android:id="@+id/edit_informto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/merNotallowdspinner"
-            android:layout_toRightOf="@id/txt_informto"
-            android:visibility="gone" />
+                <RelativeLayout
+                    android:id="@+id/rel_selfie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
+                    <ImageView
+                        android:id="@+id/img_selfie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
 
+                    <ImageView
+                        android:id="@+id/non_working_img_cam_selfie"
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_menu_camera" />
 
-        <TextView
-            android:id="@+id/testview4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/spinner2"
-            android:layout_marginBottom="14dp"
-            android:layout_marginLeft="15sp"
-            android:layout_toRightOf="@+id/spinner2"
-            android:text="Capture Photo"
-            android:visibility="invisible" />
-
-        <Button
-            android:id="@+id/picbdddtn1"
-            android:layout_width="65sp"
-            android:layout_height="50sp"
-            android:layout_alignBaseline="@+id/testview4"
-            android:layout_alignBottom="@+id/testview4"
-            android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@+id/testview4"
-            android:background="@drawable/camera"
-            android:visibility="invisible" />
-
-    </RelativeLayout>
-
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

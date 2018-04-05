@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cpm.pgattendance.autoupdate.AutoUpdateActivity">
+    tools:context="com.cpm.phillips.autoupdate.AutoUpdateActivity">
 
 </android.support.constraint.ConstraintLayout>

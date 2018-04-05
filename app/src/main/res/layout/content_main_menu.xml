@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cpm.pgattendance.MainMenuActivity"
+    tools:context="com.cpm.phillips.MainMenuActivity"
     tools:showIn="@layout/app_bar_main_menu">
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/png_logo"
+                android:src="@drawable/philips_logo"
                 android:layout_centerInParent="true"
                 />
 

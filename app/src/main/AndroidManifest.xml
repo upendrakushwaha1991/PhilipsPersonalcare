@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cpm.pgattendance">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cpm.phillips">
 
+    <meta-data
+        android:name="firebase_crashlytics_collection_enabled"
+        android:value="false" />
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -23,29 +27,38 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/png_logo"
+        android:icon="@drawable/parinaam_logo_ico"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
             android:label="@string/action_login" />
         <activity
             android:name=".MainMenuActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_main_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".dailyEntry.StoreListActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainMenuActivity"
             android:label="@string/title_activity_store_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".dailyEntry.StoreImageActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_store_image"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".autoupdate.AutoUpdateActivity" />
         <activity
             android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,10 +70,12 @@
             android:name=".AttendanceActivity"
             android:label="@string/title_activity_attendance"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".download.DownloadActivity" />
+        <activity android:name=".download.DownloadActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".dailyEntry.NonWorkingActivity"
             android:label="@string/title_activity_non_working"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".dailyEntry.VisitorLoginActivity"
@@ -69,11 +84,50 @@
         <activity
             android:name=".dailyEntry.MyPerfromanceActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".dailyEntry.CampaignListActivity" />
+        <activity
+            android:name=".dailyEntry.CampaignListActivity"
+            android:label="@string/title_activity_campaign_list" />
         <activity
             android:name=".dailyEntry.CampaignEntryActivity"
             android:label="@string/title_activity_campaign_entry"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dailyEntry.StoreListForCampaignActivity"
+            android:label="@string/title_activity_store_list" />
+        <activity
+            android:name=".dailyEntry.CustomerInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".dailyEntry.ClientFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_client_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dailyEntry.StoreEntryActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".dailyEntry.StoreListActivity" />
+        <activity
+            android:name=".dailyEntry.OpeningStockingActivity"
+            android:screenOrientation="portrait"
+            android:label="Sale"
+            android:parentActivityName=".dailyEntry.StoreEntryActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UploadActivity"
+            android:screenOrientation="portrait"
+            android:label="Upload Data" />
+        <activity android:name=".CheckoutNUploadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".dailyEntry.MidDayStockActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".dailyEntry.StoreEntryActivity" />
+        <activity android:name=".dailyEntry.ClosingStockActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".dailyEntry.StoreEntryActivity">
+
+        </activity>
     </application>
 
 </manifest>
