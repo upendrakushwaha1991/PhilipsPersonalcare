@@ -151,7 +151,6 @@ public class MyPerfromanceActivity extends AppCompatActivity {
             getPerformanceColor(String.valueOf(current.getPSS()), viewHolder.tvpss);
             getPerformanceColor(String.valueOf(current.getMerchandise()), viewHolder.tvmerchandise);
 
-
             viewHolder.tvroute.setText(current.getRoute());
             viewHolder.tvpss.setText(String.valueOf(current.getPSS()));
             viewHolder.tvmerchandise.setText(String.valueOf(current.getMerchandise()));

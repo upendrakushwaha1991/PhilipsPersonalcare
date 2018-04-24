@@ -70,6 +70,7 @@ public class StoreListActivity extends AppCompatActivity {
     }
 
     void prepareList() {
+        db.open();
         storelist = db.getStoreData(date, username);
         coverage = db.getCoverageData(date, username);
         skuList = db.getSkuData(date,store_cd);
