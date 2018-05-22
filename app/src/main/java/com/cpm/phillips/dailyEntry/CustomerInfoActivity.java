@@ -436,7 +436,7 @@ public class CustomerInfoActivity extends AppCompatActivity {
        if(TextUtils.isEmpty(User_Name)){
            msg = "Please enter username";
            checkflag = false;
-       }else if(!isValidEmailAddress(Email)){
+       }else if(!isValidEmailAddress(Email) && !TextUtils.isEmpty(Email)){
            msg = "Please valid enter email";
            checkflag = false;
        }else if(TextUtils.isEmpty(Number)){
@@ -537,7 +537,13 @@ public class CustomerInfoActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final ViewHolder holder, final int position) {
             holder.name.setText(list.get(position).getUSER_NAME());
-            holder.email.setText(list.get(position).getUSER_EMAIL());
+            if(list.get(position).getUSER_EMAIL().equalsIgnoreCase("")){
+                holder.email.setVisibility(View.GONE);
+            }else{
+                holder.email.setVisibility(View.VISIBLE);
+                holder.email.setText(list.get(position).getUSER_EMAIL());
+            }
+
             holder.number.setText(list.get(position).getUSER_MOBILE());
 
 

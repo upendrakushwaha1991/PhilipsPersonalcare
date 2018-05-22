@@ -39,7 +39,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
-                    android:layout_weight="6"
+                    android:layout_weight="7"
                     card_view:cardBackgroundColor="@color/white"
                     card_view:cardCornerRadius="5dp">
 
@@ -48,7 +48,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:weightSum="7">
+                        android:weightSum="6">
 
                         <TextView
                             android:id="@+id/tv_user_id"
@@ -63,7 +63,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="2dp"
-                            android:layout_weight="1.2"
+                            android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="10">
 
@@ -107,7 +107,8 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginTop="2dp"
-                            android:layout_weight="1.6"
+                            android:layout_weight="2"
+                            android:padding="2dp"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -118,7 +119,8 @@
                                 android:layout_marginRight="10dp"
                                 android:layout_weight="1"
                                 android:orientation="horizontal"
-                                android:weightSum="5">
+                                android:padding="2dp"
+                                android:weightSum="4">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -132,7 +134,7 @@
                                     android:id="@+id/tv_name"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="3"
+                                    android:layout_weight="2"
                                     android:textColor="@color/green"
                                     android:textSize="18sp" />
                             </LinearLayout>
@@ -146,7 +148,7 @@
                                 android:layout_marginTop="4dp"
                                 android:layout_weight="1"
                                 android:orientation="horizontal"
-                                android:weightSum="5">
+                                android:weightSum="4">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -159,7 +161,7 @@
                                     android:id="@+id/tv_designation"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="3"
+                                    android:layout_weight="2"
                                     android:textColor="@color/green"
                                     android:textSize="@dimen/text_size_small" />
                             </LinearLayout>

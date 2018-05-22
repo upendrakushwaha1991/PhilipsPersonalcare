@@ -80,18 +80,25 @@
         <activity
             android:name=".dailyEntry.VisitorLoginActivity"
             android:label="@string/title_activity_visitor_login"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".dailyEntry.MyPerfromanceActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".dailyEntry.CampaignListActivity"
             android:label="@string/title_activity_campaign_list" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".dailyEntry.CampaignEntryActivity"
             android:label="@string/title_activity_campaign_entry"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".dailyEntry.StoreListForCampaignActivity"
             android:label="@string/title_activity_store_list" />
         <activity
