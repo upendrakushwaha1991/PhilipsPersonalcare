@@ -219,7 +219,6 @@ public class VisitorLoginActivity extends AppCompatActivity implements View.OnCl
                                                             int id) {
 
                                             if (isUpdate) {
-
                                                 String out_time = tv_out_time.getText().toString();
                                                 visitorLoginGetterSetter.setOut_time(out_time);
 
@@ -319,7 +318,8 @@ public class VisitorLoginActivity extends AppCompatActivity implements View.OnCl
 
                 break;
             case R.id.btngo:
-
+                database.open();
+                database.deletePreviousVistorData(empid,visit_date);
                 emp_name = et_emp_name.getText().toString().trim().replaceAll("[&^<>{}'$]", "");
                 if (emp_name.equals("")) {
                         Toast.makeText(getApplicationContext(), "Please enter Employee Code", Toast.LENGTH_SHORT).show();
@@ -721,7 +721,7 @@ public class VisitorLoginActivity extends AppCompatActivity implements View.OnCl
             } else if (intime_img == null) {
                 error_msg = "Please click in time image";
                 return false;
-            } else if (database.isVistorDataExists(empid)) {
+            } else if (database.isVistorDataExists(empid,visit_date)) {
                 error_msg = "Employee already entered";
                 return false;
             } else {

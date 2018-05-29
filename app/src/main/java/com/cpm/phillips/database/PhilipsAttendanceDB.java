@@ -656,30 +656,23 @@ public class PhilipsAttendanceDB extends SQLiteOpenHelper {
 
     }
 
-    public boolean isVistorDataExists(String emp_id) {
+    public boolean isVistorDataExists(String emp_id, String visit_date) {
 
         Cursor dbcursor = null;
 
         try {
-            dbcursor = db.rawQuery("SELECT  * from TABLE_VISITOR_LOGIN where EMP_CD = '" + emp_id + "'"
+            dbcursor = db.rawQuery("SELECT  * from TABLE_VISITOR_LOGIN where EMP_CD = '" + emp_id + "' and "+CommonString.KEY_VISIT_DATE+" = '"+visit_date+"'"
                     , null);
-            int count = 0;
+
             if (dbcursor != null) {
                 dbcursor.moveToFirst();
-                while (!dbcursor.isAfterLast()) {
-
-                    count++;
-
-                    dbcursor.moveToNext();
-                }
+                int icount = dbcursor.getInt(0);
                 dbcursor.close();
-
-                if (count > 0) {
+                if (icount > 0) {
                     return true;
                 } else {
                     return false;
                 }
-
             }
 
         } catch (Exception e) {
@@ -1723,5 +1716,9 @@ public class PhilipsAttendanceDB extends SQLiteOpenHelper {
             Crashlytics.logException(e);
             return id;
         }
+    }
+
+    public void deletePreviousVistorData(String empid, String visit_date) {
+        db.delete("TABLE_VISITOR_LOGIN",   "EMP_CD = '" + empid + "' and "+ CommonString.KEY_VISIT_DATE +" <> '"+ visit_date +"'", null);
     }
 }
