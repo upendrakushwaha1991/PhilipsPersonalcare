@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cpm.phillips.AttendanceActivity"
+    tools:context="com.cpm.phillipspc.AttendanceActivity"
     tools:showIn="@layout/activity_attendance">
 
     <LinearLayout

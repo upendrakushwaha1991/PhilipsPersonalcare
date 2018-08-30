@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"> Philips </string>
+    <string name="app_name"> Philips Personal Care</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>
