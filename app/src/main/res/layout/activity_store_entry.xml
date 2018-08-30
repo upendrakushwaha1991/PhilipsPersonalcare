@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.cpm.phillips.dailyEntry.StoreEntryActivity">
+    tools:context="com.cpm.phillipspc.dailyEntry.StoreEntryActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/drawer_layout_recycle"

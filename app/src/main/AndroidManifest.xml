@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cpm.phillips">
+    package="com.cpm.phillipspc">
 
     <meta-data
         android:name="firebase_crashlytics_collection_enabled"
